@@ -1,18 +1,3 @@
 <p align="center">
-  <img
-    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWo3bG9qbmJ6dTl5NHQ4ZjE4czNqazRldWY5aHExZWtod21qOXR0ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gwKYFj2wSJQ30Ar3Ji/giphy.gif"
-    width="110"
-    valign="middle"
-  />
-
-  <img
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&size=36&pause=1000&color=36BCF7&center=true&vCenter=true&width=500&height=70&lines=Hello+World!"
-  alt="Typing SVG"
-/>
-
-  <img
-    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dkMTdwYjZ5bmRrOGg4dWljNHhjNmtuOXBrcG0zYTUycnRxcDFxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l3gwiJrGYcAwBwZ3Lc/giphy.gif"
-    width="110"
-    valign="middle"
-  />
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWo3bG9qbmJ6dTl5NHQ4ZjE4czNqazRldWY5aHExZWtod21qOXR0ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gwKYFj2wSJQ30Ar3Ji/giphy.gif" width="90" height="90" align="middle"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&size=32&pause=1000&color=36BCF7&center=true&vCenter=true&width=360&height=90&lines=Hello+World!" width="360" height="90" align="middle" alt="Typing SVG"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dkMTdwYjZ5bmRrOGg4dWljNHhjNmtuOXBrcG0zYTUycnRxcDFxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l3gwiJrGYcAwBwZ3Lc/giphy.gif" width="90" height="90" align="middle">
 </p>
