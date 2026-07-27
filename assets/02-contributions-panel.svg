@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+      width="1200" height="410" viewBox="0 0 1200 410">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#010604"/>
+          <stop offset=".52" stop-color="#07130c"/>
+          <stop offset="1" stop-color="#010604"/>
+        </linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".38" r=".72">
+          <stop offset="0" stop-color="#1cff72" stop-opacity=".12"/>
+          <stop offset=".56" stop-color="#0a572b" stop-opacity=".04"/>
+          <stop offset="1" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0H0V30" fill="none" stroke="#2aff79" stroke-opacity=".035"/>
+        </pattern>
+        <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+          <rect width="4" height="1" fill="#9affbd" opacity=".035"/>
+        </pattern>
+        <filter id="softGlow">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <rect width="1200" height="410" fill="url(#bg)"/>
+      <rect width="1200" height="410" fill="url(#glow)"/>
+      <rect width="1200" height="410" fill="url(#grid)"/>
+      <rect width="1200" height="410" fill="url(#scan)"/>
+      <path d="M1 0V410 M1199 0V410" stroke="#1f6b3c" stroke-opacity=".8"/>
+
+      <g font-family="JetBrains Mono, Fira Code, monospace"
+         font-size="13" fill="#39ff88" opacity=".15">
+        <text x="42" y="46">$ contribution.graph.mount()</text>
+<text x="760" y="88">render.profile.section() // online</text>
+<text x="76" y="374">git status --short &amp;&amp; echo continuous-background</text>
+<text x="700" y="392">system.interface.ready = true</text>
+        <animate attributeName="opacity" values=".11;.19;.13;.17;.11"
+                 dur="5.8s" repeatCount="indefinite"/>
+      </g>
+
+      
+      
+  <rect x="76" y="58" width="1048" height="294" rx="18"
+        fill="#030806" fill-opacity=".82"
+        stroke="#2ddc72" stroke-opacity=".35"/>
+  <text x="600" y="184" text-anchor="middle"
+        font-family="JetBrains Mono, Fira Code, monospace"
+        font-size="18" fill="#6aff9a">RUN THE PROFILE-3D WORKFLOW</text>
+  <text x="600" y="220" text-anchor="middle"
+        font-family="JetBrains Mono, Fira Code, monospace"
+        font-size="13" fill="#40b96c">the live Git Block graph will replace this panel</text>
+
+    </svg>

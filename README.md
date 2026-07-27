@@ -1,1 +1,3 @@
-
+<div align="center">
+<img src="./assets/00-hero.svg" width="100%" alt="Animated terminal hero"/><img src="./assets/01-contributions-header.svg" width="100%" alt="Contribution section"/><img src="./assets/02-contributions-panel.svg" width="100%" alt="Git Block contribution graph"/><img src="./assets/03-visitors-header.svg" width="100%" alt="Profile visitors section"/><br/><img src="https://komarev.com/ghpvc/?username=selcanqafarova&label=PEOPLE+WHO+VISITED+THIS+PROFILE&color=20c55e&labelColor=06120b&style=for-the-badge" alt="Live profile visitor count"/><br/><img src="./assets/04-stack-header.svg" width="100%" alt="Primary stack section"/><br/><img src="https://skillicons.dev/icons?i=ts,js,swift,py,cpp,cs,html,css,linux,git,figma&theme=dark&perline=11" alt="TypeScript, JavaScript, Swift, Python, C++, C#, HTML, CSS, Linux, Git and UI/UX"/><br/><img src="./assets/05-footer.svg" width="100%" alt="Terminal footer"/>
+</div>

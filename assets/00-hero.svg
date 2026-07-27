@@ -1,0 +1,633 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Animated hacker terminal banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020805"/>
+      <stop offset="0.5" stop-color="#06150c"/>
+      <stop offset="1" stop-color="#020805"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#16ff72" stop-opacity="0.18"/>
+      <stop offset="0.55" stop-color="#0aff66" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" opacity="0.22"/>
+    </pattern>
+
+    <g id="spark">
+      <path d="M0,-15 L3,-3 L15,0 L3,3 L0,15 L-3,3 L-15,0 L-3,-3 Z" fill="#ffd05a"/>
+    </g>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="675" rx="24" fill="url(#glow)"/>
+
+  
+  
+  <!-- Animated infinite terminal background -->
+  <g font-family="Fira Code, JetBrains Mono, monospace"
+     font-size="17"
+     fill="#27ff7a"
+     opacity="0.31">
+
+    <!-- Left stream: duplicated content creates a seamless loop -->
+    <g>
+      <g>
+        <text x="18" y="0">git clone https://github.com/selcanqafarova &amp;&amp; cd selcanqafarova &amp;&amp; pnpm install &amp;&amp; pnpm dev</text>
+        <text x="58" y="44">pnpm install</text>
+        <text x="108" y="88">cargo build --release --locked &amp;&amp; cargo test --workspace &amp;&amp; cargo fmt --check</text>
+        <text x="42" y="132">swift build</text>
+        <text x="150" y="176">python main.py --config production.json --watch --verbose</text>
+        <text x="76" y="220">git add . &amp;&amp; git commit -m &quot;Refactor architecture&quot; &amp;&amp; git push origin main</text>
+        <text x="126" y="264">SELECT id, username, created_at FROM users WHERE active = TRUE ORDER BY created_at DESC;</text>
+        <text x="28" y="308">npm run dev</text>
+        <text x="138" y="352">ssh root@server</text>
+        <text x="66" y="396">const app = createApp(App).use(router).use(pinia).mount(&apos;#app&apos;)</text>
+        <text x="146" y="440">system online...</text>
+      </g>
+
+      <g transform="translate(0 -484)">
+        <text x="18" y="0">git clone https://github.com/selcanqafarova &amp;&amp; cd selcanqafarova &amp;&amp; pnpm install &amp;&amp; pnpm dev</text>
+        <text x="58" y="44">pnpm install</text>
+        <text x="108" y="88">cargo build --release --locked &amp;&amp; cargo test --workspace &amp;&amp; cargo fmt --check</text>
+        <text x="42" y="132">swift build</text>
+        <text x="150" y="176">python main.py --config production.json --watch --verbose</text>
+        <text x="76" y="220">git add . &amp;&amp; git commit -m &quot;Refactor architecture&quot; &amp;&amp; git push origin main</text>
+        <text x="126" y="264">SELECT id, username, created_at FROM users WHERE active = TRUE ORDER BY created_at DESC;</text>
+        <text x="28" y="308">npm run dev</text>
+        <text x="138" y="352">ssh root@server</text>
+        <text x="66" y="396">const app = createApp(App).use(router).use(pinia).mount(&apos;#app&apos;)</text>
+        <text x="146" y="440">system online...</text>
+      </g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="0 484"
+        dur="7.5s"
+        repeatCount="indefinite"/>
+    </g>
+
+    <!-- Center stream -->
+    <g opacity="0.88">
+      <g>
+        <text x="354" y="0">docker compose up -d --build --remove-orphans</text>
+        <text x="414" y="44">git fetch --all --prune &amp;&amp; git rebase origin/main</text>
+        <text x="382" y="88">bun dev</text>
+        <text x="462" y="132">npm audit fix --force &amp;&amp; npm run lint &amp;&amp; npm run typecheck</text>
+        <text x="334" y="176">git status</text>
+        <text x="446" y="220">HTTP/2 200 OK</text>
+        <text x="366" y="264">redis ping</text>
+        <text x="426" y="308">connected</text>
+        <text x="352" y="352">git commit -m &quot;Implement authentication and dashboard&quot;</text>
+        <text x="438" y="396">build succeeded</text>
+        <text x="374" y="440">deployment completed successfully • uptime 99.99%</text>
+      </g>
+
+      <g transform="translate(0 -484)">
+        <text x="354" y="0">docker compose up -d --build --remove-orphans</text>
+        <text x="414" y="44">git fetch --all --prune &amp;&amp; git rebase origin/main</text>
+        <text x="382" y="88">bun dev</text>
+        <text x="462" y="132">npm audit fix --force &amp;&amp; npm run lint &amp;&amp; npm run typecheck</text>
+        <text x="334" y="176">git status</text>
+        <text x="446" y="220">HTTP/2 200 OK</text>
+        <text x="366" y="264">redis ping</text>
+        <text x="426" y="308">connected</text>
+        <text x="352" y="352">git commit -m &quot;Implement authentication and dashboard&quot;</text>
+        <text x="438" y="396">build succeeded</text>
+        <text x="374" y="440">deployment completed successfully • uptime 99.99%</text>
+      </g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="0 484"
+        dur="9s"
+        repeatCount="indefinite"/>
+    </g>
+
+    <!-- Right stream -->
+    <g opacity="0.78">
+      <g>
+        <text x="676" y="0">TypeScript</text>
+        <text x="724" y="44">JavaScript</text>
+        <text x="666" y="88">C++</text>
+        <text x="738" y="132">Swift</text>
+        <text x="696" y="176">Python</text>
+        <text x="646" y="220">Linux</text>
+        <text x="752" y="264">UI/UX</text>
+        <text x="704" y="308">git commit</text>
+        <text x="654" y="352">build succeeded</text>
+        <text x="736" y="396">pnpm dev</text>
+        <text x="682" y="440">application ready on http://localhost:3000 • watching for changes</text>
+      </g>
+
+      <g transform="translate(0 -484)">
+        <text x="676" y="0">TypeScript</text>
+        <text x="724" y="44">JavaScript</text>
+        <text x="666" y="88">C++</text>
+        <text x="738" y="132">Swift</text>
+        <text x="696" y="176">Python</text>
+        <text x="646" y="220">Linux</text>
+        <text x="752" y="264">UI/UX</text>
+        <text x="704" y="308">git commit</text>
+        <text x="654" y="352">build succeeded</text>
+        <text x="736" y="396">pnpm dev</text>
+        <text x="682" y="440">application ready on http://localhost:3000 • watching for changes</text>
+      </g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="0 484"
+        dur="6.5s"
+        repeatCount="indefinite"/>
+    </g>
+  </g>
+
+
+  <!-- Additional stream for the wider 16:9 canvas -->
+  <g transform="translate(330 0)" opacity="0.72">
+    <g font-family="Fira Code, JetBrains Mono, monospace"
+       font-size="17" fill="#27ff7a" opacity="0.26">
+      <g>
+        <text x="620" y="0">interface ProfileMetrics &#123; views: number; contributions: number; stack: string[]; &#125;</text>
+        <text x="690" y="44">git checkout -b feature/profile-readme &amp;&amp; git pull --rebase origin main</text>
+        <text x="650" y="88">npm run build &amp;&amp; npm run test &amp;&amp; npm run lint</text>
+        <text x="730" y="132">swift test --parallel &amp;&amp; swift build -c release</text>
+        <text x="640" y="176">python -m pytest tests/ --cov=src --cov-report=term-missing</text>
+        <text x="700" y="220">docker compose logs --follow --tail=100 application</text>
+        <text x="660" y="264">git log --oneline --graph --decorate --all</text>
+        <text x="740" y="308">const status = await deploy&#40;&#123; environment: &apos;production&apos; &#125;&#41;;</text>
+        <text x="680" y="352">SELECT technology, experience FROM primary_stack ORDER BY priority;</text>
+        <text x="720" y="396">system.profile.render&#40;&#41; // ready</text>
+        <text x="650" y="440">connection established • rendering interface • no errors detected</text>
+      </g>
+      <g transform="translate(0 -484)">
+        <text x="620" y="0">interface ProfileMetrics &#123; views: number; contributions: number; stack: string[]; &#125;</text>
+        <text x="690" y="44">git checkout -b feature/profile-readme &amp;&amp; git pull --rebase origin main</text>
+        <text x="650" y="88">npm run build &amp;&amp; npm run test &amp;&amp; npm run lint</text>
+        <text x="730" y="132">swift test --parallel &amp;&amp; swift build -c release</text>
+        <text x="640" y="176">python -m pytest tests/ --cov=src --cov-report=term-missing</text>
+        <text x="700" y="220">docker compose logs --follow --tail=100 application</text>
+        <text x="660" y="264">git log --oneline --graph --decorate --all</text>
+        <text x="740" y="308">const status = await deploy&#40;&#123; environment: &apos;production&apos; &#125;&#41;;</text>
+        <text x="680" y="352">SELECT technology, experience FROM primary_stack ORDER BY priority;</text>
+        <text x="720" y="396">system.profile.render&#40;&#41; // ready</text>
+        <text x="650" y="440">connection established • rendering interface • no errors detected</text>
+      </g>
+      <animateTransform attributeName="transform" type="translate"
+        from="0 0" to="0 484" dur="7.8s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Faint middle code -->
+
+
+  <g font-family="Fira Code, JetBrains Mono, monospace" font-size="12" fill="#36BCF7" opacity="0.11">
+    <text x="310" y="92">function createFuture() &#123; return innovation; &#125;</text>
+    <text x="760" y="548">system.status = "ONLINE";</text>
+  </g>
+
+  <!-- Center typing: complete text snapshots guarantee the cursor is always after the last character -->
+  <g>
+    
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">H|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.000000;0.000000;0.036415;0.036425;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">He|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.036405;0.036415;0.072829;0.072839;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hel|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.072819;0.072829;0.109244;0.109254;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hell|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.109234;0.109244;0.145658;0.145668;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.145648;0.145658;0.182073;0.182083;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.182063;0.182073;0.218487;0.218497;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;W|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.218477;0.218487;0.254902;0.254912;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Wo|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.254892;0.254902;0.291317;0.291327;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Wor|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.291307;0.291317;0.327731;0.327741;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Worl|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.327721;0.327731;0.364146;0.364156;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.364136;0.364146;0.400560;0.400570;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World!|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.400550;0.400560;0.436975;0.436985;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World!|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.436965;0.436975;0.498599;0.498609;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World!
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.498589;0.498599;0.560224;0.560234;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World!|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.560214;0.560224;0.621849;0.621859;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World!
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.621839;0.621849;0.683473;0.683483;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;World|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.683463;0.683473;0.701681;0.701691;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Worl|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.701671;0.701681;0.719888;0.719898;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Wor|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.719878;0.719888;0.738095;0.738105;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;Wo|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.738085;0.738095;0.756303;0.756313;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;W|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.756293;0.756303;0.774510;0.774520;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello&#160;|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.774500;0.774510;0.792717;0.792727;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hello|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.792707;0.792717;0.810924;0.810934;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hell|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.810914;0.810924;0.829132;0.829142;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">Hel|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.829122;0.829132;0.847339;0.847349;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">He|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.847329;0.847339;0.865546;0.865556;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">H|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.865536;0.865546;0.883754;0.883764;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.883744;0.883754;0.901961;0.901971;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+    <text x="434" y="338"
+          font-family="Fira Code, JetBrains Mono, monospace"
+          font-size="46"
+          font-weight="200"
+          fill="#36BCF7"
+          filter="url(#softGlow)"
+          opacity="0">|
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.901951;0.901961;1.000000;1.000000;1"
+               calcMode="discrete"
+               dur="3.570s"
+               repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- CRT scanlines + subtle flicker -->
+  <rect width="1200" height="675" rx="24" fill="url(#scanlines)" opacity="0.42"/>
+  <rect width="1200" height="675" rx="24" fill="#7dff9e" opacity="0.015">
+    <animate attributeName="opacity" values="0.01;0.035;0.012;0.025;0.01" dur="0.22s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="1198" height="673" rx="23" fill="none" stroke="#1d6e3a" stroke-opacity="0.7"/>
+</svg>

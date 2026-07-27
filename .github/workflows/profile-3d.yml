@@ -1,0 +1,38 @@
+name: GitHub Profile 3D Contributions
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v5
+
+      - name: Generate Git Block contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Wrap Git Block in continuous background
+        run: python scripts/build_contribution_panel.py
+
+      - name: Commit generated profile assets
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add profile-3d-contrib/ assets/02-contributions-panel.svg
+          if git diff --cached --quiet; then
+            echo "No profile changes"
+          else
+            git commit -m "chore: update profile visuals"
+            git push
+          fi
