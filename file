@@ -1,1 +1,226 @@
 
+from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
+
+source = Path("profile-3d-contrib/profile-gitblock.svg")
+target = Path("assets/02-contributions-panel.svg")
+
+if not source.exists():
+    raise SystemExit(f"Missing generated file: {source}")
+
+raw = source.read_text(encoding="utf-8")
+match = re.search(r"<svg\b([^>]*)>(.*)</svg>\s*$", raw, re.S)
+if not match:
+    raise SystemExit("Could not parse generated Git Block SVG")
+
+attrs, inner = match.groups()
+viewbox_match = re.search(r'viewBox="([^"]+)"', attrs)
+if viewbox_match:
+    viewbox = viewbox_match.group(1)
+else:
+    width = re.search(r'width="([^"]+)"', attrs)
+    height = re.search(r'height="([^"]+)"', attrs)
+    viewbox = f"0 0 {width.group(1) if width else 1000} {height.group(1) if height else 500}"
+
+panel = f"""<svg xmlns="http://www.w3.org/2000/svg"
+ width="1200" height="720" viewBox="0 0 1200 720">
+ <defs>
+  <linearGradient id="profileBg" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#010604"/>
+   <stop offset=".52" stop-color="#07130c"/>
+   <stop offset="1" stop-color="#010604"/>
+  </linearGradient>
+  <radialGradient id="profileGlow" cx=".5" cy=".45" r=".72">
+   <stop offset="0" stop-color="#1cff72" stop-opacity=".11"/>
+   <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="profileGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+   <path d="M30 0H0V30" fill="none" stroke="#2aff79" stroke-opacity=".035"/>
+  </pattern>
+ </defs>
+ <rect width="1200" height="720" fill="url(#profileBg)"/>
+ <rect width="1200" height="720" fill="url(#profileGlow)"/>
+ <rect width="1200" height="720" fill="url(#profileGrid)"/>
+ <path d="M1 0V720 M1199 0V720" stroke="#1f6b3c" stroke-opacity=".8"/>
+ <rect x="48" y="42" width="1104" height="636" rx="22"
+       fill="#020604" fill-opacity=".72"
+       stroke="#2ddc72" stroke-opacity=".36"/>
+ <svg x="76" y="68" width="1048" height="584"
+      viewBox="{viewbox}" preserveAspectRatio="xMidYMid meet">
+  {inner}
+ </svg>
+</svg>"""
+
+target.write_text(panel, encoding="utf-8")
+ET.parse(target)
+print(f"Built {target}")
+
+# Continuous GitHub profile installation
+
+Upload this entire folder to the profile repository:
+
+`selcanqafarova/selcanqafarova`
+
+Then open:
+
+**Actions → GitHub Profile 3D Contributions → Run workflow**
+
+The Action generates the Git Block contribution graph and automatically embeds it into the matching continuous terminal background.
+
+Dynamic elements:
+
+- Live visitor count: Komarev Profile Views Counter
+- Stack icons: TypeScript, JavaScript, Swift, Python, C++, C#, HTML, CSS, Linux, Git and Figma for UI/UX
+- Daily refreshed Git Block contribution graph
+
+<div align="center">
+<img src="./assets/00-hero.svg" width="100%" alt="Animated terminal hero"/><img src="./assets/01-contributions-header.svg" width="100%" alt="Contribution section"/><img src="./assets/02-contributions-panel.svg" width="100%" alt="Git Block contribution graph"/><img src="./assets/03-visitors-header.svg" width="100%" alt="Profile visitors section"/><br/><img src="https://komarev.com/ghpvc/?username=selcanqafarova&label=PEOPLE+WHO+VISITED+THIS+PROFILE&color=20c55e&labelColor=06120b&style=for-the-badge" alt="Live profile visitor count"/><br/><img src="./assets/04-stack-header.svg" width="100%" alt="Primary stack section"/><br/><img src="https://skillicons.dev/icons?i=ts,js,swift,py,cpp,cs,html,css,linux,git,figma&theme=dark&perline=11" alt="TypeScript, JavaScript, Swift, Python, C++, C#, HTML, CSS, Linux, Git and UI/UX"/><br/><img src="./assets/05-footer.svg" width="100%" alt="Terminal footer"/>
+</div>
+
+name: GitHub Profile 3D Contributions
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v5
+
+      - name: Generate Git Block contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Wrap Git Block in continuous background
+        run: python scripts/build_contribution_panel.py
+
+      - name: Commit generated profile assets
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add profile-3d-contrib/ assets/02-contributions-panel.svg
+          if git diff --cached --quiet; then
+            echo "No profile changes"
+          else
+            git commit -m "chore: update profile visuals"
+            git push
+          fi
+
+<svg xmlns="http://www.w3.org/2000/svg"
+      width="1200" height="410" viewBox="0 0 1200 410">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#010604"/>
+          <stop offset=".52" stop-color="#07130c"/>
+          <stop offset="1" stop-color="#010604"/>
+        </linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".38" r=".72">
+          <stop offset="0" stop-color="#1cff72" stop-opacity=".12"/>
+          <stop offset=".56" stop-color="#0a572b" stop-opacity=".04"/>
+          <stop offset="1" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0H0V30" fill="none" stroke="#2aff79" stroke-opacity=".035"/>
+        </pattern>
+        <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+          <rect width="4" height="1" fill="#9affbd" opacity=".035"/>
+        </pattern>
+        <filter id="softGlow">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <rect width="1200" height="410" fill="url(#bg)"/>
+      <rect width="1200" height="410" fill="url(#glow)"/>
+      <rect width="1200" height="410" fill="url(#grid)"/>
+      <rect width="1200" height="410" fill="url(#scan)"/>
+      <path d="M1 0V410 M1199 0V410" stroke="#1f6b3c" stroke-opacity=".8"/>
+
+      <g font-family="JetBrains Mono, Fira Code, monospace"
+         font-size="13" fill="#39ff88" opacity=".15">
+        <text x="42" y="46">$ contribution.graph.mount()</text>
+<text x="760" y="88">render.profile.section() // online</text>
+<text x="76" y="374">git status --short &amp;&amp; echo continuous-background</text>
+<text x="700" y="392">system.interface.ready = true</text>
+        <animate attributeName="opacity" values=".11;.19;.13;.17;.11"
+                 dur="5.8s" repeatCount="indefinite"/>
+      </g>
+
+      
+      
+  <rect x="76" y="58" width="1048" height="294" rx="18"
+        fill="#030806" fill-opacity=".82"
+        stroke="#2ddc72" stroke-opacity=".35"/>
+  <text x="600" y="184" text-anchor="middle"
+        font-family="JetBrains Mono, Fira Code, monospace"
+        font-size="18" fill="#6aff9a">RUN THE PROFILE-3D WORKFLOW</text>
+  <text x="600" y="220" text-anchor="middle"
+        font-family="JetBrains Mono, Fira Code, monospace"
+        font-size="13" fill="#40b96c">the live Git Block graph will replace this panel</text>
+
+    </svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+      width="1200" height="225" viewBox="0 0 1200 225">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#010604"/>
+          <stop offset=".52" stop-color="#07130c"/>
+          <stop offset="1" stop-color="#010604"/>
+        </linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".38" r=".72">
+          <stop offset="0" stop-color="#1cff72" stop-opacity=".12"/>
+          <stop offset=".56" stop-color="#0a572b" stop-opacity=".04"/>
+          <stop offset="1" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0H0V30" fill="none" stroke="#2aff79" stroke-opacity=".035"/>
+        </pattern>
+        <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+          <rect width="4" height="1" fill="#9affbd" opacity=".035"/>
+        </pattern>
+        <filter id="softGlow">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <rect width="1200" height="225" fill="url(#bg)"/>
+      <rect width="1200" height="225" fill="url(#glow)"/>
+      <rect width="1200" height="225" fill="url(#grid)"/>
+      <rect width="1200" height="225" fill="url(#scan)"/>
+      <path d="M1 0V225 M1199 0V225" stroke="#1f6b3c" stroke-opacity=".8"/>
+
+      <g font-family="JetBrains Mono, Fira Code, monospace"
+         font-size="13" fill="#39ff88" opacity=".15">
+        <text x="42" y="46">$ profile.views.read()</text>
+<text x="760" y="88">render.profile.section() // online</text>
+<text x="76" y="189">git status --short &amp;&amp; echo continuous-background</text>
+<text x="700" y="207">system.interface.ready = true</text>
+        <animate attributeName="opacity" values=".11;.19;.13;.17;.11"
+                 dur="5.8s" repeatCount="indefinite"/>
+      </g>
+
+      
+      <text x="600" y="126" text-anchor="middle"
+            font-family="JetBrains Mono, Fira Code, monospace"
+            font-size="32" font-weight="700" fill="#d6ffe2"
+            filter="url(#softGlow)">PROFILE VISITORS</text>
+      <text x="600" y="158" text-anchor="middle"
+            font-family="JetBrains Mono, Fira Code, monospace"
+            font-size="14" fill="#52dd83" opacity=".84">live counter / profile traffic</text>
+      <path d="M190 184H1010" stroke="#29d76b" stroke-opacity=".28"/>
+        
+      
+    </svg>
