@@ -3,3 +3,7 @@
   <img src="./assets/05-footer.svg" width="100%" alt="Terminal footer"/>
 </div>
 
+## Featured project
+
+[QAFAROVS — Creative Studio](https://github.com/selcanqafarova/qafarovs.com)
+
